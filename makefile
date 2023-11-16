@@ -11,3 +11,7 @@ k9s-install:
   wget https://github.com/derailed/k9s/releases/download/v0.28.2/k9s_Linux_amd64.tar.gz
   tar -xf archive.tar.gz
   tar -xf k9s_Linux_amd64.tar.gz
+
+keda-install:
+	@echo "${BLUE}Installing/upgrading keda${FLAT}"
+  helm upgrade --install  ${KEDA_NAMESPACE} kedacore/keda --namespace ${KEDA_NAMESPACE}
