@@ -7,6 +7,7 @@ FLAT=\033[0m
 
 
 k9s-install:
-k9s-install:
 	@echo "${BLUE}Installing k9s${FLAT}"
-	helm upgrade --install  ${KEDA_NAMESPACE} kedacore/keda --namespace ${KEDA_NAMESPACE}
+	wget https://github.com/derailed/k9s/releases/download/v0.28.2/k9s_Linux_amd64.tar.gz
+	tar -xf archive.tar.gz
+	tar -xf k9s_Linux_amd64.tar.gz
